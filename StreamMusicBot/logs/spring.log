@@ -1,0 +1,70 @@
+2019-04-17 11:53:55.893  INFO 12400 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        b0a0eca2ee66750fec199094b900b191a92074a9-SNAPSHOT
+	Build:          768
+	Build time:     01.04.2019 21:26:58 CEST
+	Branch          master
+	Commit:         b0a0eca
+	Commit time:    01.04.2019 21:25:14 CEST
+	JVM:            11.0.2
+	Lavaplayer      1.3.10
+
+2019-04-17 11:53:56.026  INFO 12400 --- [main] o.s.boot.SpringApplication               :        .   _                  _ _       _    __ _ _
+      /\\ | | __ ___   ____ _| (_)_ __ | | __\ \ \ \
+     ( ( )| |/ _` \ \ / / _` | | | '_ \| |/ / \ \ \ \
+      \\/ | | (_| |\ V / (_| | | | | | |   <   ) ) ) )
+       '  |_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\ / / / /
+    =========================================/_/_/_/
+
+    :: Lavalink    ::       
+    :: Spring Boot ::        (v2.0.4.RELEASE)
+
+
+2019-04-17 11:53:56.256  INFO 12400 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-HCQIF86 with PID 12400 (C:\Users\joelp\source\repos\StreamMusicBot\StreamMusicBot\Lavalink.jar started by joelp in C:\Users\joelp\source\repos\StreamMusicBot\StreamMusicBot)
+2019-04-17 11:53:56.258  INFO 12400 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2019-04-17 11:53:56.385  INFO 12400 --- [main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b02881e: startup date [Wed Apr 17 11:53:56 BST 2019]; root of context hierarchy
+2019-04-17 11:53:56.450  WARN 12400 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2019-04-17 11:53:59.310  INFO 12400 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2019-04-17 11:53:59.341  INFO 12400 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2019-04-17 11:53:59.593  WARN 12400 --- [main] io.undertow.websockets.jsr               : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used
+2019-04-17 11:53:59.593  WARN 12400 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2019-04-17 11:53:59.635  INFO 12400 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2019-04-17 11:53:59.635  INFO 12400 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3250 ms
+2019-04-17 11:53:59.746  INFO 12400 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-04-17 11:53:59.754  INFO 12400 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-17 11:53:59.755  INFO 12400 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-17 11:53:59.756  INFO 12400 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-17 11:53:59.757  INFO 12400 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-17 11:53:59.758  INFO 12400 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'responseHeaderFilter' to: [/*]
+2019-04-17 11:54:00.682  WARN 12400 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2019-04-17 11:54:00.702  INFO 12400 --- [main] l.s.c.AudioSendFactoryConfiguration      : OS: Windows 10, Arch: amd64
+2019-04-17 11:54:00.704  INFO 12400 --- [main] l.s.c.AudioSendFactoryConfiguration      : JDA-NAS supported system detected. Enabled native audio sending.
+2019-04-17 11:54:00.705  INFO 12400 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting buffer to 400ms
+2019-04-17 11:54:00.706  INFO 12400 --- [main] l.s.c.AudioSendFactoryConfiguration      : Setting playlist load limit to 6
+2019-04-17 11:54:01.823  INFO 12400 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2019-04-17 11:54:01.959  INFO 12400 --- [main] o.s.w.s.s.s.WebSocketHandlerMapping      : Root mapping to handler of type [class org.springframework.web.socket.server.support.WebSocketHttpRequestHandler]
+2019-04-17 11:54:02.448  INFO 12400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-17 11:54:02.986  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b02881e: startup date [Wed Apr 17 11:53:56 BST 2019]; root of context hierarchy
+2019-04-17 11:54:03.146  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/debug/nashorn],methods=[POST]}" onto public java.lang.String lavalink.server.util.DebugRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+2019-04-17 11:54:03.159  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/loadtracks],methods=[GET],produces=[application/json]}" onto public java.util.concurrent.CompletionStage<org.springframework.http.ResponseEntity<java.lang.String>> lavalink.server.player.AudioLoaderRestHandler.getLoadTracks(javax.servlet.http.HttpServletRequest,java.lang.String)
+2019-04-17 11:54:03.162  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetracks],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.postDecodeTracks(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-04-17 11:54:03.164  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/decodetrack],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.lang.String> lavalink.server.player.AudioLoaderRestHandler.getDecodeTrack(javax.servlet.http.HttpServletRequest,java.lang.String) throws java.io.IOException
+2019-04-17 11:54:03.172  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-17 11:54:03.174  INFO 12400 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-17 11:54:03.248  INFO 12400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-17 11:54:03.249  INFO 12400 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-17 11:54:03.767  INFO 12400 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-04-17 11:54:03.783  INFO 12400 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2019-04-17 11:54:03.912  INFO 12400 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2019-04-17 11:54:03.923  INFO 12400 --- [main] lavalink.server.Launcher                 : Started Launcher in 8.993 seconds (JVM running for 10.281)
+2019-04-17 13:30:17.710  INFO 12400 --- [Thread-1] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7b02881e: startup date [Wed Apr 17 11:53:56 BST 2019]; root of context hierarchy
+2019-04-17 13:30:17.713  INFO 12400 --- [Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2019-04-17 13:30:17.714  INFO 12400 --- [Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-04-17 13:30:17.716  INFO 12400 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.

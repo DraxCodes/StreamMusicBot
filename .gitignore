@@ -1,0 +1,6 @@
+
+.vs/*
+StreamMusicBot/bin/*
+StreamMusicBot/obj/*
+*.jar
+*.yml
