@@ -124,7 +124,7 @@ namespace StreamMusicBot.Services
 
         private async Task ClientReadyAsync()
         {
-            await _lavaSocketClient.StartAsync(_client, new Configuration());
+            await _lavaSocketClient.StartAsync(_client);
         }
 
         private async Task TrackFinished(LavaPlayer player, LavaTrack track, TrackEndReason reason)
