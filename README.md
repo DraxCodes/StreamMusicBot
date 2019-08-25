@@ -18,7 +18,7 @@ Before you get going on writing the code for your music bot. Make sure you have 
 4. Edit what you want to edit, this part is up to you. If you get stuck, join the Victoria Discord server.
       - This can be found linked on the Victoria repository (linked above).
 5. Ensure LavaLink is setup and online.
-      - See the Before Setup section above for further info.
+      - See the [Before Setup](#before-setup) section above for further info.
 6. Start the bot in debug and wait for it to connect to Discord.
 7. Ensure it is connected to LavaLink by waiting for the connection output in the console window.
 8. If all goes well and you are happy, publish your bot however you see fit.
