@@ -60,10 +60,13 @@ namespace StreamMusicBot.Services
         }
 
         public async Task StopAsync()
+        public async Task<string> StopAsync(ulong guildId)
         {
+            var _player = _lavaSocketClient.GetPlayer(guildId);
             if (_player is null)
-                return;
+                return "Error with Player";
             await _player.StopAsync();
+            return "Music Playback Stopped.";
         }
 
         public async Task<string> SkipAsync()
