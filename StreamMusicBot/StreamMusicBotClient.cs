@@ -31,7 +31,7 @@ namespace StreamMusicBot
 
         public async Task InitializeAsync()
         {
-            await _client.LoginAsync(TokenType.Bot, "NTUyODQ0NTE0NjA0MjIwNDQ2.XLcKQg.uuu8i_SiRaYSL9_sazUoObF6WGc");
+            await _client.LoginAsync(TokenType.Bot, "GET_YOUR_TOKEN_AND_PUT_IT_HERE");
             await _client.StartAsync();
             _client.Log += LogAsync;
             _services = SetupServices();
