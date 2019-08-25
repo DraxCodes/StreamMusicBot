@@ -59,7 +59,6 @@ namespace StreamMusicBot.Services
             }
         }
 
-        public async Task StopAsync()
         public async Task<string> StopAsync(ulong guildId)
         {
             var _player = _lavaSocketClient.GetPlayer(guildId);
