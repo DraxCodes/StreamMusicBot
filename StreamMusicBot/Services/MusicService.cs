@@ -13,7 +13,6 @@ namespace StreamMusicBot.Services
         private LavaRestClient _lavaRestClient;
         private LavaSocketClient _lavaSocketClient;
         private DiscordSocketClient _client;
-        private LavaPlayer _player;
 
         public MusicService(LavaRestClient lavaRestClient, DiscordSocketClient client, LavaSocketClient lavaSocketClient)
         {
@@ -38,7 +37,7 @@ namespace StreamMusicBot.Services
 
         public async Task<string> PlayAsync(string query, ulong guildId)
         {
-            _player = _lavaSocketClient.GetPlayer(guildId);
+            var _player = _lavaSocketClient.GetPlayer(guildId);
             var results = await _lavaRestClient.SearchYouTubeAsync(query);
             if (results.LoadType == LoadType.NoMatches || results.LoadType == LoadType.LoadFailed)
             {
@@ -68,8 +67,9 @@ namespace StreamMusicBot.Services
             return "Music Playback Stopped.";
         }
 
-        public async Task<string> SkipAsync()
+        public async Task<string> SkipAsync(ulong guildId)
         {
+            var _player = _lavaSocketClient.GetPlayer(guildId);
             if (_player is null || _player.Queue.Items.Count() is 0)
                 return "Nothing in queue.";
 
@@ -78,8 +78,9 @@ namespace StreamMusicBot.Services
             return $"Skiped: {oldTrack.Title} \nNow Playing: {_player.CurrentTrack.Title}";
         }
 
-        public async Task<string> SetVolumeAsync(int vol)
+        public async Task<string> SetVolumeAsync(int vol, ulong guildId)
         {
+            var _player = _lavaSocketClient.GetPlayer(guildId);
             if (_player is null)
                 return "Player isn't playing.";
 
@@ -92,8 +93,9 @@ namespace StreamMusicBot.Services
             return $"Volume set to: {vol}";
         }
 
-        public async Task<string> PauseOrResumeAsync()
+        public async Task<string> PauseOrResumeAsync(ulong guildId)
         {
+            var _player = _lavaSocketClient.GetPlayer(guildId);
             if (_player is null)
                 return "Player isn't playing.";
 
@@ -109,9 +111,10 @@ namespace StreamMusicBot.Services
             }
         }
 
-        public async Task<string> ResumeAsync()
+        public async Task<string> ResumeAsync(ulong guildId)
         {
-            if(_player is null)
+            var _player = _lavaSocketClient.GetPlayer(guildId);
+            if (_player is null)
                 return "Player isn't playing.";
 
             if (_player.IsPaused)
