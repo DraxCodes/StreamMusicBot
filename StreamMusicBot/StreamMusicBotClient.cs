@@ -11,22 +11,25 @@ namespace StreamMusicBot
 {
     public class StreamMusicBotClient
     {
-        private DiscordSocketClient _client;
-        private CommandService _cmdService;
+        private readonly DiscordSocketClient _client;
+        private readonly CommandService _cmdService;
         private IServiceProvider _services;
+        private readonly LogService _logService;
 
-        public StreamMusicBotClient(DiscordSocketClient client = null, CommandService cmdService = null)
+        public StreamMusicBotClient()
         {
-            _client = client ?? new DiscordSocketClient(new DiscordSocketConfig {
+            _client = new DiscordSocketClient(new DiscordSocketConfig {
                 AlwaysDownloadUsers = true,
                 MessageCacheSize = 50,
                 LogLevel = LogSeverity.Debug
             });
 
-            _cmdService = cmdService ?? new CommandService(new CommandServiceConfig {
+            _cmdService = new CommandService(new CommandServiceConfig {
                 LogLevel = LogSeverity.Verbose,
                 CaseSensitiveCommands = false
             });
+
+            _logService = new LogService();
         }
 
         public async Task InitializeAsync()
@@ -40,20 +43,19 @@ namespace StreamMusicBot
             await cmdHandler.InitializeAsync();
 
             await _services.GetRequiredService<MusicService>().InitializeAsync();
-
             await Task.Delay(-1);
         }
 
-        private Task LogAsync(LogMessage logMessage)
+        private async Task LogAsync(LogMessage logMessage)
         {
-            Console.WriteLine(logMessage.Message);
-            return Task.CompletedTask;
+            await _logService.LogAsync(logMessage);
         }
 
         private IServiceProvider SetupServices()
             => new ServiceCollection()
             .AddSingleton(_client)
             .AddSingleton(_cmdService)
+            .AddSingleton(_logService)
             .AddSingleton<LavaRestClient>()
             .AddSingleton<LavaSocketClient>()
             .AddSingleton<MusicService>()
