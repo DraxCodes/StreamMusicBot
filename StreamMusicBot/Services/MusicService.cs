@@ -1,6 +1,5 @@
 ﻿using Discord;
 using Discord.WebSocket;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Victoria;
@@ -10,15 +9,17 @@ namespace StreamMusicBot.Services
 {
     public class MusicService
     {
-        private LavaRestClient _lavaRestClient;
-        private LavaSocketClient _lavaSocketClient;
-        private DiscordSocketClient _client;
+        private readonly LavaRestClient _lavaRestClient;
+        private readonly LavaSocketClient _lavaSocketClient;
+        private readonly DiscordSocketClient _client;
+        private readonly LogService _logService;
 
-        public MusicService(LavaRestClient lavaRestClient, DiscordSocketClient client, LavaSocketClient lavaSocketClient)
+        public MusicService(LavaRestClient lavaRestClient, DiscordSocketClient client, LavaSocketClient lavaSocketClient, LogService logService)
         {
             _client = client;
             _lavaRestClient = lavaRestClient;
             _lavaSocketClient = lavaSocketClient;
+            _logService = logService;
         }
 
         public Task InitializeAsync()
@@ -147,10 +148,9 @@ namespace StreamMusicBot.Services
             await player.PlayAsync(nextTrack);
         }
 
-        private Task LogAsync(LogMessage logMessage)
+        private async Task LogAsync(LogMessage logMessage)
         {
-            Console.WriteLine(logMessage.Message);
-            return Task.CompletedTask;
+            await _logService.LogAsync(logMessage);
         }
     }
 }
