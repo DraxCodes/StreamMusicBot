@@ -3,3 +3,4 @@
 StreamMusicBot/bin/*
 StreamMusicBot/obj/*
 *.jar
+StreamMusicBot/Config.json

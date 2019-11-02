@@ -14,7 +14,8 @@ namespace StreamMusicBot.Services
         private readonly DiscordSocketClient _client;
         private readonly LogService _logService;
 
-        public MusicService(LavaRestClient lavaRestClient, DiscordSocketClient client, LavaSocketClient lavaSocketClient, LogService logService)
+        public MusicService(LavaRestClient lavaRestClient, DiscordSocketClient client,
+            LavaSocketClient lavaSocketClient, LogService logService)
         {
             _client = client;
             _lavaRestClient = lavaRestClient;

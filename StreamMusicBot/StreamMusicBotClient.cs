@@ -6,6 +6,7 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using Victoria;
 using StreamMusicBot.Services;
+using StreamMusicBot.Entities;
 
 namespace StreamMusicBot
 {
@@ -15,6 +16,8 @@ namespace StreamMusicBot
         private readonly CommandService _cmdService;
         private IServiceProvider _services;
         private readonly LogService _logService;
+        private readonly ConfigService _configService;
+        private readonly Config _config;
 
         public StreamMusicBotClient()
         {
@@ -30,11 +33,13 @@ namespace StreamMusicBot
             });
 
             _logService = new LogService();
+            _configService = new ConfigService();
+            _config = _configService.GetConfig();
         }
 
         public async Task InitializeAsync()
         {
-            await _client.LoginAsync(TokenType.Bot, "GET_YOUR_TOKEN_AND_PUT_IT_HERE");
+            await _client.LoginAsync(TokenType.Bot, _config.Token);
             await _client.StartAsync();
             _client.Log += LogAsync;
             _services = SetupServices();
