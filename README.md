@@ -15,6 +15,7 @@ Before you get going on writing the code for your music bot. Make sure you have 
 2. Once you have it on your PC, open the solution file which will then open the whole project in Visual Studio.
 3. Rename `Config_Template.json` to `Config.json` and set your bot token in the area that has `CHANGE ME`.
       * Ensure you are providing a valid bot token otherwise it wont work.
+      * Ensure you save all for the changes to take effect. <kbd>ctrl</kbd> + <kbd>s</kbd>
 4. Edit what you want to edit, this part is up to you. If you get stuck, join the Victoria Discord server.
       - This can be found linked on the Victoria repository (linked above).
 5. Ensure LavaLink is setup and online.
